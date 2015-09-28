@@ -1,0 +1,10 @@
+<h2>Games</h2>
+<button {{action 'new'}}>New Game</button>
+<ul>
+{{#each model as |game|}}
+  <li>
+    {{#link-to 'game' game}}Game {{game.id}}{{/link-to}}
+  </li>
+{{/each}}
+</ul>
+{{outlet}}
